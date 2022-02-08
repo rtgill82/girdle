@@ -1,0 +1,23 @@
+#
+# Copyright (c) 2022, Robert Gill <rgtill82@gmail.com>
+#
+
+[package]
+name = "girdle"
+version = "1.0.0"
+edition = "2021"
+authors = ["Robert Gill <rgtill82@gmail.com>"]
+description = "An industrial back brace for heavy wordle lifting"
+repository = "https://github.com/rtgill82/girdle"
+license = "BSD-3-Clause"
+
+[dependencies]
+gdk = "0.15"
+glib = "0.15"
+gtk = "0.15"
+
+[profile.release]
+codegen-units = 1
+lto = true
+opt-level = "z"
+panic = "abort"
